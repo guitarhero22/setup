@@ -1,0 +1,13 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+k",
+        "command" : "workbench.action.tasks.runTask",
+        "args": "cpbuild"
+    },
+    {
+        "key": "ctrl+i",
+        "command" : "workbench.action.tasks.runTask",
+        "args": "cprun"
+    }
+]

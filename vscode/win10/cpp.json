@@ -1,0 +1,54 @@
+{
+	"simple": {
+		"prefix": "simple",
+		"body": [
+			"#include<bits/stdc++.h>\r",
+			"using namespace std;\r",
+			"\r",
+			"#define fast_io \\\r",
+			"std::cin.tie(0); \\\r",
+			"std::cout.sync_with_stdio(false)\r",
+			"#ifdef _DEBUG\r",
+			"#define DEBUG \\\r",
+			"freopen(\"in\", \"r\", stdin); \\\r",
+			"freopen(\"out\", \"w\", stdout)\r",
+			"#else\r",
+			"#define DEBUG while(0){}\r",
+			"#endif\r",
+			"\r",
+			"#define forn(i,a,b) for(int i=a; i<b; ++i)\r",
+			"#define rforn(i,a,b) for(int i=b; i>=a; --i)\r",
+			"typedef long long int ll;\r",
+			"\r",
+			"int main(){\r",
+			"    DEBUG;\r",
+			"    fast_io;\r",
+			"\r",
+			"    $1\r",
+			"}"
+		],
+		"description": "simple"
+	},
+	"tm": {
+		"prefix": "tm",
+		"body": [
+			"#include<bits/stdc++.h>\r",
+			"using namespace std;\r",
+			"\r",
+			"#define fast_io \\\r",
+			"std::cin.tie(0); \\\r",
+			"std::cout.sync_with_stdio(false)\r",
+			"\r",
+			"#define forn(i,a,b) for(int i=a; i<b; ++i)\r",
+			"#define rforn(i,a,b) for(int i=b; i>=a; --i)\r",
+			"typedef long long int ll;\r",
+			"\r",
+			"int main(){\r",
+			"    fast_io;\r",
+			"\r",
+			"    $1\r",
+			"}"
+		],
+		"description": "simple"
+	}
+}

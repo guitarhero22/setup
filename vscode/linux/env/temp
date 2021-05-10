@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define fast_io \
+    std::cin.tie(0); \
+    std::cout.sync_with_stdio(false)
+
+#define forn(i,a,b) for(int i=a; i<b; ++i)
+#define rforn(i,a,b) for(int i=b; i>=a; --i)
+typedef long long int ll;
+
+int main(){
+    fast_io;
+
+   int T;
+   cin >> T;
+   while(T--){
+	   int n;
+	   int d;
+	   cin >> n >> d;
+	   while(n--){
+		   int x; cin >> x;
+		   if(x % d != 0 && x < d * 10){
+			   int k = x / d;
+			   x -= k * d;
+			   forn(i,1,min(9, k - 1) + 1){
+				   if((i * d + x) % 10 == 0) goto here;
+			   }
+				cout << "NO\n";
+		   }else{
+			   here:
+			   cout << "YES\n";
+		   }
+	   }
+   } 
+}

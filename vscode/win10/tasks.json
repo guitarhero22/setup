@@ -1,0 +1,55 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "cpbuild",
+            "command": "start cmd.exe /k \"g++ -D _DEBUG -O2 ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe || echo. && echo Press Any Key to Exit... && pause > nul && exit & exit\"",
+            "group": "build",
+            "options": {
+                "cwd": "${fileDirname}",
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": [
+                        "/d",
+                        "/c"
+                    ]
+                }
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "cprun",
+            "command": "start cmd.exe /k \" ${fileDirname}\\${fileBasenameNoExtension}.exe & echo. & echo Press Any Key to Exit... & pause > nul & exit\"",
+            "options": {
+                "cwd": "${fileDirname}",
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": [
+                        "/d",
+                        "/c"
+                    ]
+                }
+            },
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher" : []
+        }
+    ],
+    "version": "2.0.0"
+}

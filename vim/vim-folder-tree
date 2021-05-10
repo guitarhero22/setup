@@ -1,0 +1,30 @@
+vimfiles
+├── colors
+├── compiler
+├── doc
+├── ftdetect
+├── ftplugin
+├── indent
+├── keymap
+├── pack
+│   ├── colors
+│   │   └── opt
+│   │       ├── shades-of-purple.vim
+│   │       ├── transparency-windows-vim
+│   │       ├── vim-colors-paper
+│   │       └── vim-one
+│   ├── CP
+│   │   ├── opt
+│   │   └── start
+│   │       ├── tlib_vim
+│   │       ├── vim-addon-mw-utils
+│   │       └── vim-snipmate
+│   ├── notes
+│   │   └── opt
+│   │       ├── vim-misc
+│   │       └── vim-notes
+│   └── others
+│       └── opt
+│           └── vimtweak
+├── plugin
+└── syntax
