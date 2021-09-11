@@ -53,6 +53,61 @@
                 "clear": false
             },
             "problemMatcher" : []
+        },
+        
+        {
+            "type": "shell",
+            "label": "cpbuildA",
+            "command": "alacritty -e $SHELL -c 'g++ -D _DEBUG -O2 ${file} -o ${fileDirname}/${fileBasenameNoExtension}.o || read -p \"Press Enter to Exit...\" && exit; exit'",
+            "group": "build",
+            "options": {
+                "cwd": "${fileDirname}",
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "cprunA",
+            "command": "alacritty -e $SHELL -c '${fileDirname}/${fileBasenameNoExtension}.o ; read -p \"Press Enter to exit...\" && exit'",
+            "options": {
+                "cwd": "${fileDirname}",
+            },
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher" : []
+        },
+        {
+            "type": "shell",
+            "label": "cpbuildrunA",
+            "command": "alacritty -T \"${fileBasenameNoExtension} -- build and run\" -e $SHELL -c 'g++ -D _DEBUG -O2 ${file} -o ${fileDirname}/${fileBasenameNoExtension}.o && (echo \"build successfull!\" && ${fileDirname}/${fileBasenameNoExtension}.o && read -p \"Press Enter to exit...\" && exit) || (read -p \"Press Enter to Exit...\" && exit)'",
+            "options": {
+                "cwd": "${fileDirname}",
+            },
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher" : []
         }
 
     ],
