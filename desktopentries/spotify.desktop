@@ -1,0 +1,17 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Spotify
+GenericName=Spotify
+Comment=Spotify Web Desktop
+Exec=/opt/google/chrome/google-chrome --app=https://open.spotify.com
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/plain;
+# If you want icon, type path of icon
+# Icon=
+Categories=Network;Application;
+Keywords=Spotify;spotify;
+X-Ubuntu-Gettext-Domain=Spotify
+StartupWMClass=open.spotify.com
+Icon=spotify.svg

@@ -1,0 +1,17 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Piazza
+GenericName=Piazza
+Comment=Piazza Web Desktop
+Exec=/opt/google/chrome/google-chrome --app=https://www.piazza.com/
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/plain;
+# If you want icon, type path of icon
+# Icon=
+Categories=Network;Application;
+Keywords=Piazza;webapp;
+X-Ubuntu-Gettext-Domain=Piazza
+StartupWMClass=www.piazza.com
+Icon=piazza.svg

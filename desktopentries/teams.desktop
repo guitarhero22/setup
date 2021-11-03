@@ -1,0 +1,18 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Teams
+GenericName=Teams
+Comment=Teams Desktop
+Exec=/opt/google/chrome/google-chrome --app=https://teams.microsoft.com/
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/plain;
+# If you want icon, type path of icon
+# Icon=
+Categories=Network;Application;
+Keywords=Teams;Microsoft Teams;
+X-Ubuntu-Gettext-Domain=Teams
+StartupWMClass=teams.microsoft.com
+Icon=teams.svg
+

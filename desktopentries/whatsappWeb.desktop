@@ -1,0 +1,18 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=WhatsApp
+GenericName=WhatsApp
+Comment=WhatsApp Web Desktop
+Exec=/opt/google/chrome/google-chrome --app=https://web.whatsapp.com/
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/plain;
+# If you want icon, type path of icon
+# Icon=
+Categories=Network;Application;
+Keywords=WhatsApp;webapp;
+X-Ubuntu-Gettext-Domain=WhatsApp
+StartupWMClass=web.whatsapp.com
+Icon=WhatsApp.svg
+
