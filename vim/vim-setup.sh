@@ -12,6 +12,9 @@ sudo apt install -y git wget \
     make cmake \
     python3 python3-dev \
     libncurses-dev 
+
+sudo apt install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev #silver searcher
+
 elif [[ "$distro" -eq "fedora" ]]; then
 sudo dnf install git wget \
     gcc gcc-c++ \
@@ -19,11 +22,16 @@ sudo dnf install git wget \
     ncurses \
     ncurses-devel \
     python3 python3-devel
+
+#silver searcher
+sudo dnf -y groupinstall "Development Tools"
+sudo dnf -y install pcre-devel xz-devel zlib-devel
 fi
 
 pushd .
 
-cd $HOME
+mkdir -p $HOME/sources
+cd $HOME/sources
 echo "cloning vim..."
 git clone --single-branch --depth 1 https://github.com/vim/vim.git
 
@@ -57,6 +65,15 @@ echo "Installing FZF..."
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 $HOME/.fzf/install
 
+echo
+echo
+echo "Installing silver searcher"
+git clone --depth 1 https://github.com/ggreer/the_silver_searcher.git
+pushd .
+cd the_silver_searcher
+./build.sh
+sudo make install
+popd
 
 
 echo 
