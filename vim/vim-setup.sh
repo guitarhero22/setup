@@ -72,7 +72,6 @@ git clone --single-branch --depth 1 https://github.com/junegunn/fzf.vim.git
 git clone --single-branch --depth 1 https://github.com/preservim/nerdtree
 git clone --single-branch --depth 1 https://github.com/MarcWeber/vim-addon-mw-utils.git
 git clone --single-branch --depth 1 https://github.com/vim-airline/vim-airline.git
-git clone --single-branch --depth 1 https://github.com/KenN7/vim-arsync.git
 git clone --single-branch --depth 1 https://github.com/garbas/vim-snipmate.git
 git clone --single-branch --depth 1 https://github.com/ycm-core/YouCompleteMe.git
 
