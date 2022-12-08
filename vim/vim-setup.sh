@@ -7,13 +7,13 @@ distro=${1:-"ubuntu"}
 echo "installing necessary packages for $distro..."
 
 if [[ "$distro" -eq "ubuntu" ]]; then
-sudo apt install -y git \
+sudo apt install -y git wget \
     build-essential \
     make cmake \
     python3 python3-dev \
     libncurses-dev 
 elif [[ "$distro" -eq "fedora" ]]; then
-sudo dnf install git \
+sudo dnf install git wget \
     gcc gcc-c++ \
     make cmake \
     ncurses \
@@ -49,6 +49,15 @@ echo
 echo
 echo "Installing..."
 sudo make install
+
+echo
+echo
+echo
+echo "Installing FZF..."
+git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
+$HOME/.fzf/install
+
+
 
 echo 
 echo

@@ -16,7 +16,6 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 "YCM
-
 nnoremap <F12> :YcmCompleter GoTo<CR>
 nnoremap <leader>gt :YcmCompleter GoTo<CR>
 nnoremap <leader>fi :YcmCompleter FixIt<CR>
@@ -27,6 +26,9 @@ nnoremap <leader>gti :YcmCompleter GoToInclude<CR>
 nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gdc :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>yd :YcmDiags<CR>
+
+"FZF
+set rtp+=~/.fzf
 
 "Buffer switching
 "nnoremap <C-m> :bnext<CR>
