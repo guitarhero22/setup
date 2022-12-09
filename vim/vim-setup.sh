@@ -91,6 +91,9 @@ git clone --single-branch --depth 1 https://github.com/MarcWeber/vim-addon-mw-ut
 git clone --single-branch --depth 1 https://github.com/vim-airline/vim-airline.git
 git clone --single-branch --depth 1 https://github.com/garbas/vim-snipmate.git
 git clone --single-branch --depth 1 https://github.com/ycm-core/YouCompleteMe.git
+git clone --single-branch --depth 1 https://github.com/Xuyuanp/nerdtree-git-plugin.git
+git clone --single-branch --depth 1 https://github.com/tpope/vim-fugitive.git
+git clone --single-branch --depth 1 https://github.com/airblade/vim-gitgutter.git
 
 echo "Compiling YouComplete Me"
 cd YouCompleteMe
