@@ -86,7 +86,6 @@ echo "Adding packages for coding..."
 cd "$HOME/.vim/pack/coding/start"
 
 plugins_to_install=( \
-"kien/ctrlp.vim" \
 "junegunn/fzf.vim" \
 "preservim/nerdtree" \
 "MarcWeber/vim-addon-mw-utils" \
