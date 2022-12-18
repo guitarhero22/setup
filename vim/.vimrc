@@ -1,40 +1,7 @@
- "
-set background=dark
-colorscheme PaperColor
-
-"colors
-let &term = "xterm-256color"
-
-if has('termguicolors')
- set termguicolors
-endif
-
-"Nerd Tree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
-"YCM
-nnoremap <F12> :YcmCompleter GoTo<CR>
-nnoremap <leader>gt :YcmCompleter GoTo<CR>
-nnoremap <leader>fi :YcmCompleter FixIt<CR>
-nnoremap <leader>gd :YcmCompleter GetDoc<CR>
-nnoremap <leader>gtp :YcmCompleter GetType<CR>
-nnoremap <leader>gp :YcmCompleter GetParent<CR>
-nnoremap <leader>gti :YcmCompleter GoToInclude<CR>
-nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gdc :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>yd :YcmDiags<CR>
-
-"FZF
-set rtp+=~/.fzf
-
-"Buffer switching
-"nnoremap <C-m> :bnext<CR>
-"nnoremap <C-i> :tabnext<CR>
-"nnoremap <C-n> :tabnew<CR>
-"nnoremap <C-w> :tabclose<CR>
+"
+"Tabs
+nnoremap <C-n> :tabnew<CR>
+nnoremap <S-Tab> :tabnext<CR>
 nmap ; :
 
 "Tab and syntax highlighting
@@ -43,7 +10,36 @@ syntax on
 set ts=4 sw=4
 set autoindent
 set smartindent
-"set expandtab
+set expandtab
+set backspace=indent,eol,start
+set autoread
+
+"line numbering
+set number
+set relativenumber
+command Rn set relativenumber!
+
+"crsor
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+"To set the gruvbox theme
+"colorscheme gruvbox
+"set background=dark
+"let g:gruvbox_contrast_dark="hard"
+
+"Nerd Tree
+"nnoremap <leader>n :NERDTreeFocus<CR>
+"nnoremap <C-t> :NERDTreeToggle<CR>
+"nnoremap <C-f> :NERDTreeFind<CR>
+
+" Zen Mode for neovim
+"if has('nvim')
+"    packadd zen-mode.nvim
+"endif
+
+" For snipmate
+"let g:snipMate = { 'snippet_version' : 1 }
 
 "format on save
 "map <C-K> :py3f /usr/share/clang/clang-format.py
@@ -54,30 +50,25 @@ set smartindent
 "endfunction
 "autocmd BufWritePre *.hpp,*.h,*.cc,*.cpp call Formatonsave()
 
-"vim auto brackets
-let g:snipMate = { 'snippet_version' : 1 }
+"Vim tablime
+"let g:indentLine_char_list = ['|']
+"let g:airline#extensions#tabline#enabled = 1
 
-"my config for braces
-"inoremap ( ()<left>
-"inoremap (( (
-"inoremap [ []<left>
-"inoremap [[ [
-"inoremap { {}<left>
-"inoremap {{ {
-"inoremap <expr> } (matchstr(getline('.'), '\%' . col('.') . 'c.') ==? '}') ? '<right>':'}'
-"inoremap <expr> ] (matchstr(getline('.'), '\%' . col('.') . 'c.') ==? ']') ? '<right>':']'
-"inoremap <expr> ) (matchstr(getline('.'), '\%' . col('.') . 'c.') ==? ')') ? '<right>':')'
-"inoremap {<CR> {<CR>}<ESC>O
+"YCM
+"nnoremap <F12> :YcmCompleter GoTo<CR>
+"nnoremap <leader>gt :YcmCompleter GoTo<CR>
+"nnoremap <leader>fi :YcmCompleter FixIt<CR>
+"nnoremap <leader>gd :YcmCompleter GetDoc<CR>
+"nnoremap <leader>gtp :YcmCompleter GetType<CR>
+"nnoremap <leader>gp :YcmCompleter GetParent<CR>
+"nnoremap <leader>gti :YcmCompleter GoToInclude<CR>
+"nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
+"nnoremap <leader>gdc :YcmCompleter GoToDeclaration<CR>
+"nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
+"nnoremap <leader>yd :YcmDiags<CR>
 
-set autoread
+"FZF
+"set rtp+=~/.fzf
 
-"line numbering
-set number
-fu! SetRelNum(...)
-if &relativenumber==1
-set relativenumber!
-else
-set relativenumber!
-endif
-endfu
-command Rn set relativenumber! 
+" Find Files using fzf
+"nnoremap <C-p> :Files<CR>
