@@ -1,8 +1,10 @@
 "
-"Tabs
-nnoremap <C-n> :tabnew<CR>
-nnoremap <S-Tab> :tabnext<CR>
+"Tabs And buffers
 nmap ; :
+nnoremap <F2> :bp<CR>
+nnoremap <F3> :bn<CR>
+nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <C-n> :tabnew<CR>
 
 "Tab and syntax highlighting
 filetype plugin indent on
