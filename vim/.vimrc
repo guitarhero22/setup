@@ -4,8 +4,8 @@ nmap ; :
 nnoremap <F2> :bp<CR>
 nnoremap <F3> :bn<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
-nnoremap <F8> :tabprev<CR>
-nnoremap <F9> :tabnext<CR>
+nnoremap <F9> :tabprev<CR>
+nnoremap <F10> :tabnext<CR>
 nnoremap <C-n> :tabnew<CR>
 
 "Tab and syntax highlighting

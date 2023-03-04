@@ -21,7 +21,8 @@ sudo dnf install git wget \
     make cmake \
     ncurses \
     ncurses-devel \
-    python3 python3-devel
+    python3 python3-devel \
+    libX11-devel gtk3-devel
 
 #silver searcher
 sudo dnf -y groupinstall "Development Tools"
@@ -44,7 +45,8 @@ echo
 echo "Configuring vim..."
 ./configure --with-features=huge \
     --enable-multibyte \
-    --enable-python3interp 
+    --enable-python3interp \
+    --enable-gui=auto
 
 echo 
 echo
